@@ -1,0 +1,43 @@
+version: '3.4'
+
+volumes:
+  datafiles:
+
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2017-CU8-ubuntu
+    volumes:
+      - datafiles:/var/opt/mssql/data
+    ports:
+      - "1444:1433"
+    restart: always
+    
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: SqlExpress!
+  
+  sapi:
+    build:
+      context: .
+      dockerfile: StudentApi/Dockerfile
+    depends_on:
+      - db
+    ports:
+      - "8000:80"
+      - "8001:443"
+    restart: always
+    environment:
+      - DBHOST=db
+      - DBPORT=1433
+      - DBPASSWORD=SqlExpress!
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  blazorapp:
+    #image: blazorapp
+    build:
+      context: .
+      dockerfile: StudentBlazor/Dockerfile
+    depends_on:
+      - sapi
+    ports:
+      - 8888:80

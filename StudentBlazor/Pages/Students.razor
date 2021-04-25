@@ -1,0 +1,55 @@
+@page "/students"
+
+@using System.Net.Http
+@inject HttpClient httpClient
+@using StudentLibrary
+
+<h1 style="margin-bottom:7px;">Students</h1>
+
+<NavLink class="nav-link" href="students/add">
+    <a class="btn btn-success btn-sm" style="background-color:blue;border:blue;" href="/students/add/">Add Student</a>
+</NavLink>
+
+@if (students == null) {
+<p><em>Loading...</em></p>
+} else {
+<table class='table table-hover'>
+  <thead>
+    <tr>
+      <th>Student ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Specialization</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var item in students) {
+    <tr>
+      <td>@item.StudentId</td>
+      <td>@item.FirstName</td>
+      <td>@item.LastName</td>
+      <td>@item.Specialization</td>
+      <td><a class="btn btn-success btn-sm" style="background-color:blue;border:blue;" href="@($"/students/view/{item.StudentId}")">details</a></td>
+      <td><a class="btn btn-success btn-sm" href="@($"/students/edit/{item.StudentId}")">edit</a></td>
+      <td><a class="btn btn-success btn-sm" style="background-color:red;border:red;" href="@($"/students/delete/{item.StudentId}")">delete</a></td>
+    </tr>
+    }
+  </tbody>
+</table>
+}
+
+
+
+@code {
+  Student[] students;
+  string baseUrl = "http://localhost:8000/";
+
+  protected override async Task OnInitializedAsync() {
+    await load();
+  }
+
+  protected async Task load() {
+    students = await httpClient.GetFromJsonAsync<Student[]>($"{baseUrl}api/students");
+  }
+
+}

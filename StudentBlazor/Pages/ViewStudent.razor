@@ -1,0 +1,55 @@
+@page "/students/view/{id}"
+@inject NavigationManager NavManager
+
+@using System.Net.Http
+@inject HttpClient httpClient
+@using StudentLibrary
+
+
+<h1>Student Information</h1>
+
+  <EditForm Model="@student">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <span style="width:110px;float:left">Student ID</span>
+    <InputText placeholder="Student ID" id="studentid" @bind-Value="@student.StudentId" style="margin-bottom:5px;" disabled="true"/>
+    <br />
+    <span style="width:110px;float:left">First Name</span>
+    <InputText placeholder="First Name" id="firstName" @bind-Value="@student.FirstName" style="margin-bottom:5px;" disabled="true"/>
+    <br />
+    <span style="width:110px;float:left">Last Name</span>
+    <InputText placeholder="Last Name" id="lastName" @bind-Value="@student.LastName" style="margin-bottom:5px;" disabled="true"/>
+    <br />
+    <span style="width:110px;float:left">Mobile Number</span>
+    <InputText placeholder="Mobile Number" id="mobilenumber" @bind-Value="@student.MobileNumber" style="margin-bottom:5px;" disabled="true"/>
+    <br />
+    <span style="width:110px;float:left">Email Address</span>
+    <InputText placeholder="Email Address" id="emailaddress" @bind-Value="@student.EmailAddress" style="margin-bottom:5px;" disabled="true"/>
+    <br />
+    <span style="width:110px;float:left">City</span>
+    <InputText placeholder="City" id="city" @bind-Value="@student.City" style="margin-bottom:5px;" disabled="true"/>
+    <br />
+    <span style="width:110px;float:left">Specialization</span>
+    <InputText placeholder="Specialization" id="specialization" @bind-Value="@student.Specialization" style="margin-bottom:15px;" disabled="true"/>
+    <br />
+    <a class="btn btn-success btn-sm" href="/students/">Back To Student List</a>
+
+    @code {
+    private Student student = new Student();
+
+    [Parameter]
+    public string id{ get; set; }
+    string baseUrl = "http://localhost:8000/";
+
+        protected override async Task OnInitializedAsync() {
+            await load();
+        }
+
+        protected async Task load() {
+            student = await httpClient.GetFromJsonAsync<Student>($"{baseUrl}api/students/{id}");
+        }
+      
+    }
+  </EditForm>
+

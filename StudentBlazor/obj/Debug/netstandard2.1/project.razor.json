@@ -1,0 +1,71 @@
+{
+  "FilePath": "c:\\ASP\\ass2resubmit\\StudentBlazor\\StudentBlazor.csproj",
+  "Configuration": {
+    "ConfigurationName": "Default",
+    "LanguageVersion": "3.0",
+    "Extensions": []
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 800
+  },
+  "RootNamespace": "StudentBlazor",
+  "Documents": [
+    {
+      "FilePath": "c:\\ASP\\ass2resubmit\\StudentBlazor\\Shared\\SurveyPrompt.razor",
+      "TargetPath": "Shared\\SurveyPrompt.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\ASP\\ass2resubmit\\StudentBlazor\\Pages\\AddStudent.razor",
+      "TargetPath": "Pages\\AddStudent.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\ASP\\ass2resubmit\\StudentBlazor\\App.razor",
+      "TargetPath": "App.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\ASP\\ass2resubmit\\StudentBlazor\\_Imports.razor",
+      "TargetPath": "_Imports.razor",
+      "FileKind": "componentImport"
+    },
+    {
+      "FilePath": "c:\\ASP\\ass2resubmit\\StudentBlazor\\Pages\\Students.razor",
+      "TargetPath": "Pages\\Students.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\ASP\\ass2resubmit\\StudentBlazor\\Pages\\ViewStudent.razor",
+      "TargetPath": "Pages\\ViewStudent.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\ASP\\ass2resubmit\\StudentBlazor\\Pages\\DeleteStudent.razor",
+      "TargetPath": "Pages\\DeleteStudent.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\ASP\\ass2resubmit\\StudentBlazor\\Pages\\Index.razor",
+      "TargetPath": "Pages\\Index.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\ASP\\ass2resubmit\\StudentBlazor\\Shared\\NavMenu.razor",
+      "TargetPath": "Shared\\NavMenu.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\ASP\\ass2resubmit\\StudentBlazor\\Shared\\MainLayout.razor",
+      "TargetPath": "Shared\\MainLayout.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\ASP\\ass2resubmit\\StudentBlazor\\Pages\\EditStudent.razor",
+      "TargetPath": "Pages\\EditStudent.razor",
+      "FileKind": "component"
+    }
+  ],
+  "SerializationFormat": "0.2"
+}

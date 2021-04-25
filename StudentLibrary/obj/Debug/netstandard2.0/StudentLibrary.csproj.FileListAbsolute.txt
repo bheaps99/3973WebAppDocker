@@ -1,0 +1,9 @@
+C:\ASP\ass2resubmit\StudentLibrary\bin\Debug\netstandard2.0\StudentLibrary.deps.json
+C:\ASP\ass2resubmit\StudentLibrary\bin\Debug\netstandard2.0\StudentLibrary.dll
+C:\ASP\ass2resubmit\StudentLibrary\bin\Debug\netstandard2.0\StudentLibrary.pdb
+C:\ASP\ass2resubmit\StudentLibrary\obj\Debug\netstandard2.0\StudentLibrary.csprojAssemblyReference.cache
+C:\ASP\ass2resubmit\StudentLibrary\obj\Debug\netstandard2.0\StudentLibrary.AssemblyInfoInputs.cache
+C:\ASP\ass2resubmit\StudentLibrary\obj\Debug\netstandard2.0\StudentLibrary.AssemblyInfo.cs
+C:\ASP\ass2resubmit\StudentLibrary\obj\Debug\netstandard2.0\StudentLibrary.csproj.CoreCompileInputs.cache
+C:\ASP\ass2resubmit\StudentLibrary\obj\Debug\netstandard2.0\StudentLibrary.dll
+C:\ASP\ass2resubmit\StudentLibrary\obj\Debug\netstandard2.0\StudentLibrary.pdb
